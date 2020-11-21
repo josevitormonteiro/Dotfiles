@@ -61,24 +61,24 @@ font-5 = "Font Awesome 5 Brands:pixelsize=12;1"
 
 modules-left = i3
 modules-center = date 
-modules-right = filesystem pulseaudio xkeyboard memory cpu wlan  temperature  
+modules-right = filesystem pulseaudio xkeyboard memory cpu spotify
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-tray = right
+tray-position = right
 
 ##############################################
 ######	End bar configs ######################
 ##############################################
 
-#[module/spotify]
-#type = custom/script
-#interval = 1
-#format-prefix = "  "  
-#label-maxlen = 40
-#format = <label>
-#exec = python ~/.config/polybar/spotify_status.py -f '{song} - {artist}'
-#format-underline = #fff
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "  
+label-maxlen = 40
+format = <label>
+exec = python ~/.config/polybar/spotify_status.py -f '{song} - {artist}'
+format-underline = #fff
 
 
 [module/xwindow]
