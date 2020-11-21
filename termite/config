@@ -20,7 +20,7 @@ scrollback_lines = 10000
 hyperlinks = true 
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-#browser = xdg-open
+browser = xdg-open
 
 # "system", "on" or "off"
 #cursor_blink = system
@@ -88,14 +88,9 @@ color7  = #bfbfbf
 color15 = #e6e6e6
 
 [hints]
-#font = Monospace 12
-#foreground = #dcdccc
-#background = #3f3f3f
-#active_foreground = #e68080
-#active_background = #3f3f3f
-#padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
+padding = 5
+
+
+
 
 # vim: ft=dosini cms=#%s
