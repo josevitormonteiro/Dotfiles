@@ -327,11 +327,11 @@ set_from_resource $term_color15    color15
 
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #333333 #333333	#333333 #333333  #333333
-client.focused_inactive #3D3D3D #3D3D3D #3D3D3D #3D3D3D  #3D3D3D
-client.unfocused        #D6D6D6 #D6D6D6 #D6D6D6 #D6D6D6	 #D6D6D6 
-client.urgent           #333333 #333333 #333333 #333333  #333333
-client.placeholder      #333333 #333333 #333333 #333333  #333333
+client.focused          #FF8599 #FF8599 #FF8599 #FF8599 #FF8599
+#client.focused_inactive #3D3D3D #3D3D3D #3D3D3D #3D3D3D  #3D3D3D
+client.unfocused        #333333 #333333 #333333 #333333	 #333333 
+#client.urgent           #333333 #333333 #333333 #333333  #333333
+#client.placeholder      #333333 #333333 #333333 #333333  #333333
 
 
 #############################
@@ -341,7 +341,7 @@ for_window [class="^.*"] border pixel 4
 
 
 # Set inner/outer gaps
-gaps inner 8
+gaps inner 6
 gaps outer -2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
