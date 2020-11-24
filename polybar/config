@@ -19,7 +19,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #8a222222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -34,51 +34,51 @@ alert = #bd2c40
 width = 100%
 height = 32
 
-radius = 8
+#radius = 8
 fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
-line-color = #f00
+#line-size = 2
+#line-color = #f00
 
-border-size = 4
-border-color = #00000000
+#border-size = 4
+#border-color = #00000000
 
 padding-left = 0
-padding-right = 6
+padding-right = 2
+
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = fixed:pixelsize=11;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-font-3 = "Font Awesome 5 Free:style=Regular:pixelsize11;1"
-font-4 = "Font Awesome 5 Free:style=Solid:pixelsize=12;1"
-font-5 = "Font Awesome 5 Brands:pixelsize=12;1"
+
+font-0 = Hack:size=10;3
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize12;3"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
+font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
 
 
 modules-left = i3
-modules-center = date 
-modules-right = filesystem pulseaudio xkeyboard memory tray cpu spotify powermenu
+modules-center =  
+modules-right = filesystem pulseaudio xkeyboard memory tray cpu wlan date powermenu
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-tray-position = right
+#tray-position = right
 
 ##############################################
 ######	End bar configs ######################
 ##############################################
 
-[module/spotify]
-type = custom/script
-interval = 1
-format-prefix = " "  
-label-maxlen = 40
-format = <label>
-exec = python ~/.config/polybar/spotify_status.py -f '{song} - {artist}'
-format-underline = #fff
+#[module/spotify]
+#type = custom/script
+#interval = 1
+#format-prefix = " "  
+#label-maxlen = 40
+#format = <label>
+#exec = python ~/.config/polybar/spotify_status.py -f '{song} - {artist}'
+#format-underline = #fff
 
 
 [module/xwindow]
@@ -89,7 +89,7 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
@@ -221,40 +221,37 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = "CPU"
+format-prefix-foreground = ${colors.foreground-alt}  
 format-underline = #f90000
-label = Ryzen %percentage:2%%
+label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-;format-prefix = ""
+format-prefix = "MEM "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label =Ram %gb_used%
+label = %gb_used%
+
 
 [module/wlan]
 type = internal/network
-interface = net1
+interface = enp6s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
+#format-connected-underline = #9f78e1
+label-connected = 
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
+label-disconnected =  disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-0 = 
+ramp-signal-foreground = #fff
 
 [module/eth]
 type = internal/network
@@ -278,16 +275,16 @@ interval = 5
 margin-top = 0
 margin-bottom = 0
 
-date = "  %d-%m" 
+date = " %d-%m" 
 date-alt = " %Y-%m-%d"
 
-time = "  %H:%M"
+time = " %H:%M"
 time-alt = %H:%M:%S
 
 format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 
-label =  %time%   %date%
+label =  %time%  %date%
 
 
 [module/pulseaudio]
@@ -407,7 +404,7 @@ label-open = 
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
-label-separator = |
+label-separator =  | 
 label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = reboot
@@ -418,10 +415,10 @@ menu-0-1-exec = menu-open-2
 menu-1-0 = cancel
 menu-1-0-exec = menu-open-0
 menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+menu-1-1-exec = reboot
 
 menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
+menu-2-0-exec = poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 

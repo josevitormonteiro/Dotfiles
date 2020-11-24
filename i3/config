@@ -271,7 +271,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 
-exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080
+exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 -r 59.94
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
