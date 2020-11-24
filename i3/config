@@ -8,7 +8,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border none
+default_border pixel 
 default_floating_border none
 
 # Hide borders
@@ -321,11 +321,23 @@ set_from_resource $term_color15    color15
 
 
 
+
+
+
+
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #333333 #333333	#333333 #333333  #333333
+client.focused_inactive #3D3D3D #3D3D3D #3D3D3D #3D3D3D  #3D3D3D
+client.unfocused        #D6D6D6 #D6D6D6 #D6D6D6 #D6D6D6	 #D6D6D6 
+client.urgent           #333333 #333333 #333333 #333333  #333333
+client.placeholder      #333333 #333333 #333333 #333333  #333333
+
+
 #############################
 ### settings for i3-gaps: ###
 #############################
-
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 4
 
 
 # Set inner/outer gaps
