@@ -5,8 +5,8 @@ configuration {
 	lines: 12;
 	show-icons: true;
 	font: "Fira Code Semibold 11";
-	terminal: "kitty";
-	disable-history: true;
+	terminal: "alacritty";
+	disable-history: false;
 	sidebar-mode: true;
 	tokenize: true;
 	m: "-5";
