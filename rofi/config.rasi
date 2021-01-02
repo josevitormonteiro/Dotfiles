@@ -1,10 +1,10 @@
 
 configuration {
 	modi: "drun,windowcd,window";
-	width: 30;
-	lines: 12;
+	width: 35;
+	lines: 15;
 	show-icons: true;
-	font: "Fira Code Semibold 11";
+	font: "Hack 11";
 	terminal: "alacritty";
 	disable-history: false;
 	sidebar-mode: true;
@@ -12,7 +12,7 @@ configuration {
 	m: "-5";
 	line-margin: 2;
 	line-padding: 1;
-	separator-style: "none";
+	separator-style: "|";
 	hide-scrollbar: true;
 	window-format: "{w} {c}";
 	/*fullscreen: true;*/
@@ -59,3 +59,4 @@ button selected {
 element-icon { size: 2.3ch ; }
 
 // vim: set ft=css :}
+@import "/usr/share/rofi/themes/gruvbox-dark.rasi"

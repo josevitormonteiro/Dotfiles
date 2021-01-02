@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/jm/Dotfiles'
+let g:netrw_dirhist_2='/home/jm/.config/cmus'
+let g:netrw_dirhist_1='/home'
+let g:netrw_dirhist_0='/home/jm'
+let g:netrw_dirhist_9='/home/jm/.config'
+let g:netrw_dirhist_8='/home/jm/.oh-my-zsh/custom/plugins/fast-syntax-highlighting'
+let g:netrw_dirhist_7='/home/jm/Dotfiles/polybar'
+let g:netrw_dirhist_6='/home/jm/.config/sxhkd'
+let g:netrw_dirhist_5='/home/jm/.config/ranger'
+let g:netrw_dirhist_4='/home/jm/.config/coc'
