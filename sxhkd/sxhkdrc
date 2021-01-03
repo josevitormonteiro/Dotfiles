@@ -1,6 +1,5 @@
-#
-# wm independent hotkeys
-#
+
+# Bspwm hotkeys
 
 # Terminal emulator
 super + Return
@@ -65,6 +64,7 @@ super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 # Move/resize
+
 # Expand a window by moving one of its side outward
 super + alt + {Left,Down,Up,Right}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
@@ -77,4 +77,3 @@ super + alt + shift + {Left,Down,Up,Right}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-#################### End of the file #################################
