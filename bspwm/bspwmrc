@@ -1,66 +1,65 @@
 #! /bin/sh
 
-
-############# Auto Start Scripts #######
+# Auto Start Scripts 
 $HOME/.config/bspwm/Autostart.sh
 $HOME/.config/polybar/launch.sh
-$HOME/.config/bspwm/auto-presel.sh
-
-#######################################
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+# Number of workspacer per monitor
 bspc monitor -d I II III IV V VI VII VIII IX X
 
-bspc config border_width        3
-bspc config window_gap          6
-bspc config split_ratio          0.52
-#bspc config borderless_monocle   true
-#bspc config gapless_monocle      true
-   
-############ BORDER COLORS #####################
+# Split ratio 
+bspc config split_ratio      0.52
 
-##### Gray Border
+# Border settings
+bspc config border_width        3
+bspc config window_gap          6   
+
+# Border colors
 bspc config normal_border_color "#434C5E"
 bspc config active_border_color "#434C5E"
 bspc config focused_border_color "#D8DEE9"
 
-############## Applications Rules ##############
 
+# Applications rules
 
-
-bspc rule -a Rambox state=tiled desktop='^4'
-bspc rule -a Steam state=tiled desktop='^5'
 bspc rule -a Zathura state=tiled
+bspc rule -a Steam state=tiled
+bspc rule -a Gimp-2.10 state=tiled
 
+# Applications custom spawn rules by workspace 
+
+# Workspace 1 (Programming)
+bspc rule -a Code desktop='^1'
+
+# Workspace 2 (Talk)
+bspc rule -a discord desktop='^2'
+
+# Workspace 3 (Music)
+# I don't have an specific app for listening music, sometimes i use
+# Cmus, Spotify or Youtube, thats why i not create a specific rule
+
+# Workspace 4 (Anime)
+# I don't have a specific tool for watching anime
+# I just create some patterns for the use of my workspaces
+# If i use in this way, I will always know what is open in each workspace
+
+# Workspace 5 (Gaming)
+bspc rule -a Steam desktop='^5'
+
+# Workspace 6 (Lutris->Games)
+bspc rule -a Lutris desktop='^6'
+
+# Workspace 7 (Recording)
 bspc rule -a obs desktop='^7'
 
-####### Workspace 8 (Digital Painting) #########
-bspc rule -a Gimp-2.10 state=tiled desktop='^8' 
+# Workspace 8 (Digital Painting)
+bspc rule -a Gimp-2.10 desktop='^8' 
 
-
-
-###### Workspace 9 (System Settings) #########
+# Workspace 9 (System settings) 
 bspc rule -a Pavucontrol desktop='^9'
 
-
-
-########################
-###### WORKSPACE #######
-######################## 
-
-#### WK 1 - Dev
-#### WK 2 - Music 
-#### WK 3 - Discord 
-#### WK 4 - Email
-#### WK 5 - Steam
-#### WK 6 - Virtual Box
-#### WK 7 - obs
-#### wk 8 - gimp
-#### WK 9 - pavu control & barrier
-
-##################################
-####### AUTO START PROGRAMS ######
+# Auto Start Programs
 picom & nitrogen --restore; sleep 1 &
 pavucontrol & /usr/bin/dunst
-
