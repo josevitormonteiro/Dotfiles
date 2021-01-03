@@ -36,18 +36,11 @@ height = 30
 wm-restack = bspwm
 
 
-#offset-x = 10
 
-#radius = 10
+
 fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
-
-#line-size = 2
-#line-color = #f00
-
-#border-size = 4
-#border-color = #00000000
 
 padding-left = 0
 padding-right = 2
@@ -69,9 +62,6 @@ modules-right = filesystem pulseaudio xkeyboard memory tray cpu wlan date powerm
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-############################################
-######	End bar configs ######################
-##############################################
 
 #[module/spotify]
 #type = custom/script
